@@ -18,6 +18,14 @@ The system simulates a real-world retail banking underwriting workflow used for 
 
 ---
 
+## 🌐 Live Dashboard
+
+👉 **Streamlit App:**  
+https://creditshield-ai-credit-risk-limit-optimization-c3jlu47twpokmub.streamlit.app/
+
+> ⏳ *Note: App may take a few seconds to load (hosted on Streamlit Cloud)*
+---
+
 ## Business Objective
 
 Banks must balance:
