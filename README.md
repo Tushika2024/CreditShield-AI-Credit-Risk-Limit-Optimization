@@ -46,10 +46,7 @@ CreditShield enables lenders to:
 ---
 
 ## Project Architecture
-
- div align="center">
-<img src="assets/architecture.png" alt="CreditShield Architecture" width="1200"/>
-</div>
+![Architecture](assets/pipeline.png)
 ---
 
 ## Dataset
