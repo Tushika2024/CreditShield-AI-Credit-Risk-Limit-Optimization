@@ -327,29 +327,44 @@ Streamlit Dashboard
 ## Project Structure
 
 ```text
-CREDIT-RISK-PORTFOLIO-OPTIMIZATION-ENGINE
-│
-├── data
-│   └── UCI_Credit_Card.csv
-│
-├── models
-│   └── finallll_xgb_model.pkl
-│
-├── notebooks
-│   ├── Credit_Risk_Cleaned_Final_Model.ipynb
-│   └── draft.ipynb
-│
-├── outputs
-│   ├── final_xgb_model.pkl
-│   └── pd_results_final.csv
-│
-├── app-checkpoint.py
-│
-├── requirements.txt
-│
-├── README.md
-│
-└── .gitignore
+```mermaid
+flowchart LR
+
+A[Customer Data]
+--> B[Feature Engineering]
+--> C[Synthetic CIBIL Score]
+--> D[Reject Inference]
+
+D --> D1[Approved Population]
+D --> D2[Rejected Population]
+D --> D3[Inferred Outcomes]
+
+D1 --> E[Enhanced Training Dataset]
+D2 --> E
+D3 --> E
+
+E --> F[Optuna Optimization]
+
+F --> F1[Logistic Regression]
+F --> F2[Random Forest]
+F --> F3[XGBoost]
+F --> F4[LightGBM]
+F --> F5[CatBoost]
+
+F1 --> G[Best Model Selection]
+F2 --> G
+F3 --> G
+F4 --> G
+F5 --> G
+
+G --> H[PD Prediction]
+H --> I[Risk Segmentation]
+I --> J[CLI Engine]
+J --> K[Guardrails]
+K --> L[Recommended Limit]
+L --> M[SHAP Explainability]
+M --> N[Streamlit Dashboard]
+```
 ```
 
 ---
