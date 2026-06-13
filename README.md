@@ -62,8 +62,6 @@ CreditShield enables lenders to:
 
 Built behavioral credit-risk features from payment and utilization history.
 
-### Final Model Features
-
 ```text
 LIMIT_BAL
 delinquency_score
@@ -87,6 +85,27 @@ utilization_ratio
 latest_payment_ratio
 ```
 
+---
+## Reject Inference
+
+Traditional credit risk models are trained only on approved applicants, creating selection bias because rejected applicants have no observed repayment outcomes.
+
+To address this, CreditShield implements a Reject Inference pipeline to estimate the risk profile of previously rejected customers and create a more representative training dataset.
+
+Approach-
+Step 1: Synthetic Approval Policy
+Step 2: Train Approval Population Model
+Step 3: Infer Rejected Outcomes
+Step 4: Build Final Modeling Dataset
+```text
+Approved Customers
+        +
+Rejected Customers (Inferred Labels)
+        ↓
+Reject-Inference Enhanced Dataset
+
+### Final Model Features
+```
 ---
 
 ## Model Development
@@ -278,6 +297,19 @@ Customer Data
 Feature Engineering
       │
       ▼
+Synthetic CIBIL Score
+      │
+      ▼
+Reject Inference
+      │
+      ├── Approved Population
+      ├── Rejected Population
+      └── Inferred Outcomes
+      │
+      ▼
+Enhanced Training Dataset
+      │
+      ▼
 Optuna Optimization
       │
       ├── Logistic Regression
@@ -348,7 +380,7 @@ CREDIT-RISK-PORTFOLIO-OPTIMIZATION-ENGINE
 Clone repository:
 
 ```bash
-git clone https://github.com/yourusername/CreditShield.git
+git clone https://github.com/Tushika2024/CreditShield-AI-Credit-Risk-Limit-Optimization
 ```
 
 Install dependencies:
@@ -366,8 +398,6 @@ streamlit run app-checkpoint.py
 ---
 
 ## Future Enhancements
-
-* Reject Inference
 * Fair Lending Analysis
 * Model Monitoring
 * Drift Detection
