@@ -50,7 +50,6 @@ CreditShield enables lenders to:
  div align="center">
 <img src="assets/architecture.png" alt="CreditShield Architecture" width="1200"/>
 </div>
-
 ---
 
 ## Dataset
