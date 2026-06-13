@@ -292,54 +292,33 @@ Final Guardrailed Limit
 
 ```text
 Customer Data
-      │
-      ▼
+      →
 Feature Engineering
-      │
-      ▼
+      →
 Synthetic CIBIL Score
-      │
-      ▼
+      →
 Reject Inference
-      │
-      ├── Approved Population
-      ├── Rejected Population
-      └── Inferred Outcomes
-      │
-      ▼
+(Approved + Rejected + Inferred Outcomes)
+      →
 Enhanced Training Dataset
-      │
-      ▼
-Optuna Optimization
-      │
-      ├── Logistic Regression
-      ├── Random Forest
-      ├── XGBoost
-      ├── LightGBM
-      └── CatBoost
-      │
-      ▼
-Best Model Selection
-      │
-      ▼
-Probability of Default
-      │
-      ▼
+      →
+Optuna Model Selection
+(Logistic | RF | XGBoost | LightGBM | CatBoost)
+      →
+Best Model
+      →
+PD Prediction
+      →
 Risk Segmentation
-      │
-      ▼
+      →
 CLI Engine
-      │
-      ▼
+      →
 Guardrails
-      │
-      ▼
-Final Recommended Limit
-      │
-      ▼
+      →
+Recommended Credit Limit
+      →
 SHAP Explainability
-      │
-      ▼
+      →
 Streamlit Dashboard
 ```
 
