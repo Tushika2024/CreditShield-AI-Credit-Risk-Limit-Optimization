@@ -125,10 +125,11 @@ for final deployment.
 
 | Metric    | Score |
 | --------- | ----- |
-| ROC-AUC   | 0.77  |
-| Precision | 0.47  |
-| Recall    | 0.59  |
-| F1 Score  | 0.52  |
+| ROC-AUC   | 0.82  |
+| Precision | 0.59  |
+| Recall    | 0.64  |
+| F1 Score  | 0.62  |
+| Accuracy  | 0.80  |
 
 Threshold optimization was performed after training to maximize F1 Score.
 
