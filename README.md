@@ -46,7 +46,9 @@ CreditShield enables lenders to:
 ---
 
 ## Project Architecture
+
 ![Architecture](assets/pipeline.png)
+
 ---
 
 ## Dataset
@@ -295,53 +297,6 @@ Final Guardrailed Limit
 ```
 
 ---
-
-<<<<<<< HEAD
-## Project Architecture
-```text
-Customer Data
-      │
-      ▼
-Feature Engineering
-      │
-      ▼
-Optuna Optimization
-      │
-      ├── Logistic Regression
-      ├── Random Forest
-      ├── XGBoost
-      ├── LightGBM
-      └── CatBoost
-      │
-      ▼
-Best Model Selection
-      │
-      ▼
-Probability of Default
-      │
-      ▼
-Risk Segmentation
-      │
-      ▼
-CLI Engine
-      │
-      ▼
-Guardrails
-      │
-      ▼
-Final Recommended Limit
-      │
-      ▼
-SHAP Explainability
-      │
-      ▼
-Streamlit Dashboard
-```
-
-
----
-=======
->>>>>>> 8da90ae (add pipeline in readme)
 
 ## Project Structure
 
