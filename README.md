@@ -45,6 +45,14 @@ CreditShield enables lenders to:
 
 ---
 
+## Project Architecture
+
+ div align="center">
+<img src="assets/architecture.png" alt="CreditShield Architecture" width="1200"/>
+</div>
+
+---
+
 ## Dataset
 
 **UCI Default of Credit Card Clients Dataset**
@@ -292,6 +300,7 @@ Final Guardrailed Limit
 
 ---
 
+<<<<<<< HEAD
 ## Project Architecture
 ```text
 Customer Data
@@ -335,6 +344,8 @@ Streamlit Dashboard
 
 
 ---
+=======
+>>>>>>> 8da90ae (add pipeline in readme)
 
 ## Project Structure
 
